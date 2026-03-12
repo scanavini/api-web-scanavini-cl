@@ -30,7 +30,7 @@ app.use(helmet({ contentSecurityPolicy: false })); // sirve solo JSON, ajustar s
 /* CORS */
 app.use(
   cors({
-    origin: "https://andeslock.com", // ajusta a tu dominio en producción
+    origin: "https://test.andeslock.com", // ajusta a tu dominio en producción
     methods: ["POST", "OPTIONS"],
     allowedHeaders: ["Content-Type"],
     maxAge: 600,
@@ -111,6 +111,7 @@ const port = Number(process.env.PORT || 8080);
 app.listen(port, () => {
   console.log(`API contacto escuchando en :${port}`);
 });
+
 
 
 
