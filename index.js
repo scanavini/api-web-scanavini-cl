@@ -107,8 +107,8 @@ app.post("/contact", async (req, res) => {
 
     res.json({ ok: true });
   } catch (e) {
-    console.error(e);
-    res.status(500).json({ ok: false, error: "Error interno" });
+    console.error("Error en /contact:", err);
+    res.status(500).json({ ok: false, error: "No se pudo enviar el mensaje" });
   }
 });
 
