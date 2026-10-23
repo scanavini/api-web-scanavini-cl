@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "API para el sitio web de Scanavini, envío de formularios de contacto y descarga de fichas técnicas",
   "main": "index.js",
+  "engines": {
+    "node": "24.22.21"
+  },
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js"
