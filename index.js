@@ -30,13 +30,7 @@ app.use(helmet({ contentSecurityPolicy: false })); // sirve solo JSON, ajustar s
 /* CORS */
 app.use(
   cors({
-    origin: (origin, callback) => {
-      // Permite peticiones sin origin (curl, Postman, server-to-server)
-      if (!origin || allowedOrigins.includes(origin)) {
-        return callback(null, true);
-      }
-      return callback(new Error("Not allowed by CORS"));
-    },
+    origin: "https://www.scanavini.com", // ajusta a tu dominio en producción
     methods: ["POST", "OPTIONS"],
     allowedHeaders: ["Content-Type"],
     maxAge: 600,
